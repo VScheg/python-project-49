@@ -1,19 +1,8 @@
 import prompt
-import random
+from .generate import generate_expression
 
 
-def is_even(num):
-    if num % 2:
-        return False
-    else:
-        return True
-
-
-def is_correct(answer, num, name):
-    if is_even(num):
-        correct = "yes"
-    else:
-        correct = "no"
+def is_correct(answer, correct, name):
     if answer == correct:
         print("Correct!")
         return True
@@ -23,14 +12,13 @@ def is_correct(answer, num, name):
         return False
 
 
-def game(name):
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+def game(name, game_name):
     tries = 3
     while tries != 0:
-        number = random.randint(0, 99)
-        print(f"Question: {number}")
-        user = prompt.string("Your answer: ")
-        if is_correct(user, number, name):
+        expression, result = generate_expression(game_name)
+        print(f"Question: {expression}")
+        user_answer = prompt.string("Your answer: ")
+        if is_correct(user_answer, result, name):
             tries -= 1
         else:
             break

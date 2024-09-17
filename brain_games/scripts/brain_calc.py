@@ -5,8 +5,8 @@ from ..game import game
 
 def main():
     user_name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    game(user_name, 'even')
+    print('What is the result of the expression?')
+    game(user_name, 'calc')
 
 
 if __name__ == "__main__":
