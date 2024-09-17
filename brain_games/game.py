@@ -1,4 +1,5 @@
 import prompt
+from .welcome import welcome_user
 from .generate import generate_expression
 
 
@@ -12,15 +13,16 @@ def is_correct(answer, correct, name):
         return False
 
 
-def game(name, game_name):
+def game(game_name):
+    user_name = welcome_user()
     tries = 3
     while tries != 0:
         expression, result = generate_expression(game_name)
         print(f"Question: {expression}")
         user_answer = prompt.string("Your answer: ")
-        if is_correct(user_answer, result, name):
+        if is_correct(user_answer, result, user_name):
             tries -= 1
         else:
             break
     else:
-        print(f"Congratulations, {name}!")
+        print(f"Congratulations, {user_name}!")
