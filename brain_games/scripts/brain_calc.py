@@ -2,8 +2,9 @@
 from ..game import game
 
 
-def main(): 
-    game("calc")
+def main():
+    task = "What is the result of the expression?"
+    game("calc", task)
 
 
 if __name__ == "__main__":

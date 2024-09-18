@@ -13,8 +13,9 @@ def is_correct(answer, correct, name):
         return False
 
 
-def game(game_name):
+def game(game_name, task):
     user_name = welcome_user()
+    print(task)
     tries = 3
     while tries != 0:
         expression, result = generate_expression(game_name)
