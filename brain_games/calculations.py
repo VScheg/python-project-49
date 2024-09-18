@@ -22,3 +22,14 @@ def gcd(num1, num2):
         min_num = max_num % min_num
         max_num = exchange
     return max_num
+
+
+def is_prime(num):
+    if num < 2:
+        return "no"
+    elif num < 4:
+        return "yes"
+    for i in range(2, num // 2 + 1):
+        if num % i == 0:
+            return "no"
+    return "yes"

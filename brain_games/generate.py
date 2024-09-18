@@ -1,5 +1,5 @@
 import random
-from .calculations import is_even, calculate, gcd
+from .calculations import is_even, calculate, gcd, is_prime
 
 
 def generate_expression(game_name):
@@ -22,6 +22,9 @@ def generate_expression(game_name):
             progression[progression.index(key)] = ".."
             progression = [str(i) for i in progression]
             return ' '.join(progression), str(key)
+        case "prime":
+            num = random.randint(1, 99)
+            return num, is_prime(num)
 
 
 def generate_progression():
