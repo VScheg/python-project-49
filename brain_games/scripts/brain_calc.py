@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-from ..game import game
+from ..game import play_game
 
 
 def main():
-    task = "What is the result of the expression?"
-    game("calc", task)
+    play_game("calc")
 
 
 if __name__ == "__main__":

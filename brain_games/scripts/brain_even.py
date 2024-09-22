@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-from ..game import game
+from ..game import play_game
 
 
 def main():
-    task = 'Answer "yes" if the number is even, otherwise answer "no".'
-    game("even", task)
+    play_game("even")
 
 
 if __name__ == "__main__":

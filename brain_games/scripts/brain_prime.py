@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-from ..game import game
+from ..game import play_game
 
 
 def main():
-    task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    game("prime", task)
+    play_game("prime")
 
 
 if __name__ == "__main__":

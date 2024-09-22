@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-from ..game import game
+from ..game import play_game
 
 
 def main():
-    task = "Find the greatest common divisor of given numbers."
-    game("gcd", task)
+    play_game("gcd")
 
 
 if __name__ == "__main__":

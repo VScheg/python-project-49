@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-from ..game import game
+from ..game import play_game
 
 
 def main():
-    task = "What number is missing in the progression?"
-    game("progression", task)
+    play_game("progression")
 
 
 if __name__ == "__main__":
