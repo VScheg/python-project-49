@@ -13,6 +13,7 @@ TASKS = {
 
 
 def get_question_and_solution(game_name: str) -> tuple[Union[int, str]]:
+    """Return question and solution."""
     match game_name:
         case "even":
             return even.get_number_and_solution(even.is_even)
