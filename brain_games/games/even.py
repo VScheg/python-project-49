@@ -1,24 +1,20 @@
 import random
 
 
+TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+
 def is_even(number: int) -> bool:
     """Check if number is even."""
-    return False if number % 2 else True
+    return number % 2 == 0
 
 
-def get_yes_or_no(statement: bool) -> str:
-    """
-    Return "yes" if argument is True.
-    Return "no" if argument is False.
-    """
-    return "yes" if statement else "no"
-
-
-def get_number_and_solution(function) -> str:
+def generate_round() -> tuple[int, str]:
     """
     Return random number
-    and return "yes" if result of function of the number returns True,
-    or return "no" if result of function of the number returns False.
+    and return "yes" if the number is even
+    or return "no" if the number is odd.
     """
-    number = random.randint(1, 100)
-    return number, get_yes_or_no(function(number))
+    question = random.randint(1, 100)
+    solution = "yes" if is_even(question) else "no"
+    return question, solution

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 from ..game import play_game
+from ..games import even as game_module
 
 
 def main():
-    play_game("even")
+    play_game(game_module)
 
 
 if __name__ == "__main__":

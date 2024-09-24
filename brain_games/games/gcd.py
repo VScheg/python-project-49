@@ -1,6 +1,9 @@
 import random
 
 
+TASK = "Find the greatest common divisor of given numbers."
+
+
 def gcd(number_1: int, number_2: int) -> int:
     """Return the greatest common divisor of two numbers."""
     max_number = max(number_1, number_2)
@@ -13,8 +16,10 @@ def gcd(number_1: int, number_2: int) -> int:
     return max_number
 
 
-def get_numbers_and_gcd() -> tuple[int]:
+def generate_round() -> tuple[str, str]:
     """Return two random numbers and the greatest common divisor of them."""
-    a = random.randint(1, 100)
-    b = random.randint(1, 100)
-    return f"{a} {b}", str(gcd(a, b))
+    number_1 = random.randint(1, 100)
+    number_2 = random.randint(1, 100)
+    question = f"{number_1} {number_2}"
+    solution = str(gcd(number_1, number_2))
+    return question, solution

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 from ..game import play_game
+from ..games import progression as game_module
 
 
 def main():
-    play_game("progression")
+    play_game(game_module)
 
 
 if __name__ == "__main__":

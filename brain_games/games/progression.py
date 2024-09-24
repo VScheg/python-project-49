@@ -1,6 +1,9 @@
 import random
 
 
+TASK = "What number is missing in the progression?"
+
+
 def generate_progression() -> list:
     """Return random arithmetic progression."""
     number = random.randint(1, 20)
@@ -14,13 +17,15 @@ def generate_progression() -> list:
     return result
 
 
-def get_progression_and_missing_number() -> tuple[str]:
+def generate_round() -> tuple[str, str]:
     """
     Return arithmetic progression with a missing number
     and return the missing number.
     """
     progression = generate_progression()
-    key = random.choice(progression)
-    progression[progression.index(key)] = ".."
-    progression = [str(i) for i in progression]
-    return ' '.join(progression), str(key)
+    missing_number = random.choice(progression)
+    progression[progression.index(missing_number)] = ".."
+    progression = list(map(str, progression))
+    question = ' '.join(progression)
+    solution = str(missing_number)
+    return question, solution
