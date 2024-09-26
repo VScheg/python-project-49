@@ -16,5 +16,5 @@ def generate_round() -> tuple[str, str]:
     or return "no" if the number is odd.
     """
     question = str(random.randint(1, 100))
-    solution = "yes" if is_even(question) else "no"
+    solution = "yes" if is_even(int(question)) else "no"
     return question, solution
