@@ -21,6 +21,6 @@ def generate_round() -> tuple[str, str]:
     and return "yes" if the number is prime
     or return "no" if the number is not prime.
     """
-    question = str(random.randint(1, 100))
-    solution = "yes" if is_prime(int(question)) else "no"
-    return question, solution
+    question = random.randint(1, 100)
+    solution = "yes" if is_prime(question) else "no"
+    return str(question), solution
