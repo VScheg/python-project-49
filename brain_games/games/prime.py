@@ -15,12 +15,12 @@ def is_prime(number: int) -> bool:
     return True
 
 
-def generate_round() -> tuple[int, str]:
+def generate_round() -> tuple[str, str]:
     """
     Return random number
     and return "yes" if the number is prime
     or return "no" if the number is not prime.
     """
-    question = random.randint(1, 100)
+    question = str(random.randint(1, 100))
     solution = "yes" if is_prime(question) else "no"
     return question, solution

@@ -4,7 +4,7 @@ import random
 TASK = "What number is missing in the progression?"
 
 
-def generate_progression() -> list:
+def generate_progression() -> list[int]:
     """Return random arithmetic progression."""
     number = random.randint(1, 20)
     step = random.randint(1, 10)
